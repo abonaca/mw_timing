@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Interactive Figure 3</title>
+
+    <style type="text/css">
+        div.initial {}
+
+        div.itemBox {
+            display: none;
+
+        }
+
+        .item_image {
+            width: 75vw;
+            height: auto;
+        }
+
+        button {
+            font-size: 2vw;
+        }
+
+        p {
+            font-size: 2vw;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div style="margin:auto;">
+        <img id="figure3int" alt="Chemistry space in bins of eccentricity (left) and age (right) without selection boundaries." onclick="changeImage()" src="afeh_eccen_age_layer1.png" class="item_image">
+    </div>
+
+<script>
+function changeImage() {
+    var image = document.getElementById('figure3int');
+    if (image.src.match("layer1")) {
+        image.src = "afeh_eccen_age_layer2.png";
+        image.alt = "Chemistry space in bins of eccentricity (left) and age (right) with selection boundaries.";
+    } else {
+        image.src = "afeh_eccen_age_layer1.png";
+        image.alt = "Chemistry space in bins of eccentricity (left) and age (right) without selection boundaries.";
+    }
+}
+</script>
+
+</body>
+</html>
